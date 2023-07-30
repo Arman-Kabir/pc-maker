@@ -2,40 +2,56 @@
 import { Breadcrumb, Dropdown, Layout, Menu, Space, theme } from 'antd';
 const { Header, Content, Footer } = Layout;
 import { AppstoreOutlined, MailOutlined, SettingOutlined, SmileOutlined } from '@ant-design/icons';
+import Link from 'next/link';
 
 const items = [
     {
         key: '1',
         label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
-                1st menu item
-            </a>
+            <Link href="/processor">Processor</Link>
         ),
     },
     {
         key: '2',
         label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
-                2nd menu item (disabled)
-            </a>
-        ),
-        icon: <SmileOutlined />,
-        disabled: true,
+            <Link href="/motherboard">Motherboard</Link>
+        )
+
     },
     {
         key: '3',
         label: (
-            <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
-                3rd menu item (disabled)
-            </a>
-        ),
-        disabled: true,
+            <Link href="/ram">Ram</Link>
+        )
     },
     {
         key: '4',
-        danger: true,
-        label: 'a danger item',
+
+        label: (
+            <Link href="/power-supply-unit">Power Supply Unit</Link>
+        )
     },
+    {
+        key: '5',
+
+        label: (
+            <Link href="/storage-device">Storage Device</Link>
+        )
+    },
+    {
+        key: '6',
+
+        label: (
+            <Link href="/monitor">Monitor</Link>
+        )
+    },
+    {
+        key: '7',
+
+        label: (
+            <Link href="/others">Others</Link>
+        )
+    }
 ];
 
 
@@ -57,17 +73,9 @@ const RootLayout = ({ children }) => {
                     <div className="demo-logo" style={{ color: "white", fontWeight: "bold", fontSize: "30px" }}>
                         PC-Maker
                     </div>
-                    <Menu
-                        theme="dark"
-                        mode="horizontal"
-                        defaultSelectedKeys={['2']}
 
-                    >
-                        Categories
-                    </Menu>
-
-                    <Dropdown menu={{items}}>
-                        <Space>Hello</Space>
+                    <Dropdown menu={{ items }}>
+                        <Space style={{ color: "white", fontWeight: "bold", fontSize: "24px" }}>Categories</Space>
                     </Dropdown>
                 </Header>
                 <Content

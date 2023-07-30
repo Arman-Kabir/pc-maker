@@ -8,7 +8,7 @@ const HomePage = () => {
         <title>PC-Maker home Page</title>
         <meta name='home page' description=""></meta>
       </Head>
-        <h1>This is nextJs Home Page</h1>
+        
     </div>
    )
 };

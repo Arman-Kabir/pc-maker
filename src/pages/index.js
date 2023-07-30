@@ -4,6 +4,8 @@ import Head from "next/head";
 
 const HomePage = ({allProducts}) => {
   // console.log(allProducts);
+  const featuredProducts = allProducts?.filter((product)=>product.featured == true);
+  // console.log(featuredProducts);
   return (
     <div>
       <Head>
@@ -11,7 +13,7 @@ const HomePage = ({allProducts}) => {
         <meta name='home page' description=""></meta>
       </Head>
 
-      <AllProducts products={allProducts}></AllProducts>
+      <AllProducts products={featuredProducts.slice(0,6)}></AllProducts>
     </div>
   )
 };

@@ -2,6 +2,7 @@
   "products": [
     {
       "id": 1,
+      "featured": true,
       "name": "Intel 11th Gen Core i5-11400F Rocket Lake Processor",
       "image": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/core-i5-11400f/core-i5-11400f-500x500.jpg",
       "price": "14500",
@@ -60,6 +61,7 @@
     },
     {
       "id": 4,
+      "featured": true,
       "name": "GIGABYTE H510M S2H Intel 10th and11th Gen Micro ATX Motherboard",
       "image": "https://www.startech.com.bd/image/cache/catalog/motherboard/gigabyte/h510m-s2h/h510m-s2h-box-500x500.jpg",
       "price": "10000",
@@ -102,6 +104,7 @@
     },
     {
       "id": 7,
+      "featured": true,
       "name": "Apacer Panther Golden 8GB DDR4 3200MHZ Desktop RAM",
       "image": "https://www.startech.com.bd/image/cache/catalog/ram/apacer/panther-golden-4gb-ddr4-2666mhz/panther-golden-4gb-ddr4-2666mhz-01-500x500.jpg",
       "price": "2600",
@@ -144,6 +147,7 @@
     },
     {
       "id": 10,
+      "featured": true,
       "name": "Thermaltake Smart BX1 RGB 650W Non Modular 80 Plus Bronze Certified Power Supply",
       "image": "https://www.startech.com.bd/image/cache/catalog/component/power-supply/thermaltake/smart/bx1/bx1-0-500x500.jpg",
       "price": "6700",
@@ -186,6 +190,7 @@
     },
     {
       "id": 13,
+      "featured": true,
       "name": "Acer FA100 512GB M.2 NVMe PCIe Gen3 x 4 SSD",
       "image": "https://www.startech.com.bd/image/cache/catalog/ssd/acer/fa100/fa100-01-500x500.jpg",
       "price": "3000",
@@ -228,6 +233,7 @@
     },
     {
       "id": 16,
+      "featured": true,
       "name": "SAMSUNG C24F390FHW Series Curved 24-Inch FHD Monitor",
       "image": "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/c24f390fhw/c24f390fhw-02-500x500.jpg",
       "price": "16500",
@@ -270,6 +276,7 @@
     },
     {
       "id": 19,
+      "featured": true,
       "name": "Colorful GeForce GTX 1650 NB 4GD6 V3-V 4GB GDDR6 Graphics Card",
       "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/colorful/geforce-gtx-1650-nb-4gd6-v3-v/geforce-gtx-1650-nb-4gd6-v3-v-01-500x500.webp",
       "price": "18500",

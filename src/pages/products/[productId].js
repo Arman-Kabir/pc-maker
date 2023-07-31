@@ -22,19 +22,19 @@ ProductDetail.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async()=>{
-    const res = await fetch("http://localhost:5000");
+    const res = await fetch("http://localhost:5000/products");
     const products = await res.json();
 
     const paths = products.map((product)=>({
-        params:{id:product.id}
+        params:{productId:product.id}
     }))
 
     return {paths,fallback:false}
 }
 
-export const getStaticProps = async () => {
-
-    const res = await fetch("http://localhost:5000/products/1");
+export const getStaticProps = async (context) => {
+    const {params} = context;
+    const res = await fetch(`http://localhost:5000/products/${params.productId}`);
     const data = await res.json();
 
     return {

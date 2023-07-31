@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "featured": true,
       "name": "Intel 11th Gen Core i5-11400F Rocket Lake Processor",
       "image": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/core-i5-11400f/core-i5-11400f-500x500.jpg",
@@ -24,7 +24,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Intel 10th Gen Core i5-10400F Processor",
       "image": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/i5-10400/i5-10400-1-500x500.jpg",
       "price": "12500",
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Intel Pentium Gold G6405 Coffee Lake Processor",
       "image": "https://www.startech.com.bd/image/cache/catalog/processor/Intel/pentium-gold-g6405/pentium-gold-g6405-01-500x500.webp",
       "price": "7000",
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "featured": true,
       "name": "GIGABYTE H510M S2H Intel 10th and11th Gen Micro ATX Motherboard",
       "image": "https://www.startech.com.bd/image/cache/catalog/motherboard/gigabyte/h510m-s2h/h510m-s2h-box-500x500.jpg",
@@ -75,7 +75,7 @@
       "reviews": ["Best entry level mobo"]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "MSI PRO H410M-B 10th Gen Micro-ATX Motherboard",
       "image": "https://www.startech.com.bd/image/cache/catalog/motherboard/msi/pro-h410m-b/pro-h410m-b-01-500x500.jpg",
       "price": "8500",
@@ -89,7 +89,7 @@
       "reviews": ["Best entry level mobo"]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "ASRock H470M-HDV/M.2 10th Gen Micro ATX Motherboard",
       "image": "https://www.startech.com.bd/image/cache/catalog/motherboard/asrock/h470m-hdv-m-2/h470m-hdv-m-2-01-500x500.webp",
       "price": "9000",
@@ -103,7 +103,7 @@
       "reviews": ["Great entry level mobo"]
     },
     {
-      "id": 7,
+      "id": "7",
       "featured": true,
       "name": "Apacer Panther Golden 8GB DDR4 3200MHZ Desktop RAM",
       "image": "https://www.startech.com.bd/image/cache/catalog/ram/apacer/panther-golden-4gb-ddr4-2666mhz/panther-golden-4gb-ddr4-2666mhz-01-500x500.jpg",
@@ -118,7 +118,7 @@
       "reviews": ["Great for gaming"]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "TwinMOS 8GB 3200MHz DDR4 U-DIMM Desktop RAM",
       "image": "https://www.startech.com.bd/image/cache/catalog/ram/twinmos/8gb-3200mhz/8gb-3200mhz-500x500.jpg",
       "price": "3000",
@@ -132,7 +132,7 @@
       "reviews": ["Great for gaming"]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "PNY XLR8 8GB DDR4 3200MHz Desktop Gaming RAM",
       "image": "https://www.startech.com.bd/image/cache/catalog/ram/pny/xlr8/xlr8-01-500x500.jpg",
       "price": "3200",
@@ -146,7 +146,7 @@
       "reviews": ["Great for gaming,editing"]
     },
     {
-      "id": 10,
+      "id": "10",
       "featured": true,
       "name": "Thermaltake Smart BX1 RGB 650W Non Modular 80 Plus Bronze Certified Power Supply",
       "image": "https://www.startech.com.bd/image/cache/catalog/component/power-supply/thermaltake/smart/bx1/bx1-0-500x500.jpg",
@@ -161,7 +161,7 @@
       "reviews": ["Great for gaming and editing"]
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Revenger VP 350 Watt Power Supply",
       "image": "https://www.startech.com.bd/image/cache/catalog/power-supply/revenger/vp-350/vp-350-01-500x500.webp",
       "price": "2400",
@@ -175,7 +175,7 @@
       "reviews": ["Entry level for gaming and editing"]
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Gamdias Kratos M1-750B 750W 80 Plus Bronze ARGB Power Supply",
       "image": "https://www.startech.com.bd/image/cache/catalog/power-supply/gamdias/kratos-m1-750b/kratos-m1-750b-01-500x500.jpg",
       "price": "6400",
@@ -189,7 +189,7 @@
       "reviews": ["Best for gaming and editing"]
     },
     {
-      "id": 13,
+      "id": "13",
       "featured": true,
       "name": "Acer FA100 512GB M.2 NVMe PCIe Gen3 x 4 SSD",
       "image": "https://www.startech.com.bd/image/cache/catalog/ssd/acer/fa100/fa100-01-500x500.jpg",
@@ -204,7 +204,7 @@
       "reviews": ["Ideal for everything"]
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "GIGABYTE Aorus 1TB PCIe Gen4 M.2 SSD",
       "image": "https://www.startech.com.bd/image/cache/catalog/ssd/gigabyte/aorus-1tb-pcie/aorus-1tb-pcie-500x500.png",
       "price": "11000",
@@ -218,7 +218,7 @@
       "reviews": ["Great for everything"]
     },
     {
-      "id": 15,
+      "id":" 15",
       "name": "Gigabyte 120GB Solid State Drive (SSD)",
       "image": "https://www.startech.com.bd/image/cache/catalog/ssd/gigabyte/120gb/120gb-ssd-500x500.jpg",
       "price": "5000",
@@ -232,7 +232,7 @@
       "reviews": ["Good for everything"]
     },
     {
-      "id": 16,
+      "id": "16",
       "featured": true,
       "name": "SAMSUNG C24F390FHW Series Curved 24-Inch FHD Monitor",
       "image": "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/c24f390fhw/c24f390fhw-02-500x500.jpg",
@@ -247,7 +247,7 @@
       "reviews": ["Good for eyes", "eye saver mode"]
     },
     {
-      "id": 17,
+      "id":" 17",
       "name": "Samsung Odyssey G9 C49G95TSSW 49'' 240Hz G-Sync Dual-QHD Curved Gaming Monitor",
       "image": "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/c49g95tssw/c49g95tssw-1-500x500.jpg",
       "price": "196500",
@@ -261,7 +261,7 @@
       "reviews": ["Good for eyes", "eye saver mode"]
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "ASRock PG34WQ15R2B 34 WQHD 165Hz 1ms Curved Gaming Monitor",
       "image": "https://www.startech.com.bd/image/cache/catalog/monitor/asrock/pg34wq15r2b/pg34wq15r2b-01-500x500.webp",
       "price": "96500",
@@ -275,7 +275,7 @@
       "reviews": ["Good for eyes", "eye saver mode"]
     },
     {
-      "id": 19,
+      "id": "19",
       "featured": true,
       "name": "Colorful GeForce GTX 1650 NB 4GD6 V3-V 4GB GDDR6 Graphics Card",
       "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/colorful/geforce-gtx-1650-nb-4gd6-v3-v/geforce-gtx-1650-nb-4gd6-v3-v-01-500x500.webp",
@@ -290,7 +290,7 @@
       "reviews": ["592 cuda cores"]
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "PNY GeForce RTX 3060 8GB VERTO Dual Fan GDDR6 Graphics Card",
       "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/pny/geforce-rtx-3060-8gb-verto-dual-fan/geforce-rtx-3060-8gb-verto-dual-fan-01-500x500.webp",
       "price": "38500",
@@ -304,7 +304,7 @@
       "reviews": ["1592 cuda cores"]
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "GIGABYTE GeForce RTX 3060 EAGLE OC 12G GDDR6 Graphics Card",
       "image": "https://www.startech.com.bd/image/cache/catalog/graphics-card/gigabyte/rtx-3060-eagle-oc-12g/rtx-3060-eagle-oc-12g-500x500.jpg",
       "price": "48500",

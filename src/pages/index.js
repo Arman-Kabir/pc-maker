@@ -6,7 +6,7 @@ import Head from "next/head";
 
 const HomePage = ({allProducts}) => {
   //rtk query data fetching
-  const {data,isLoading,isError,error} = useGetProductsQuery();
+  // const {data,isLoading,isError,error} = useGetProductsQuery();
   // console.log(data);
   // console.log(allProducts);
   const featuredProducts = allProducts?.filter((product)=>product.featured == true);
@@ -34,11 +34,11 @@ HomePage.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch("http://localhost:3000/api/products");
   const data = await res.json();
   return {
     props:{
-      allProducts:data,
+      allProducts:data.data,
     },
     revalidate:10,
   }

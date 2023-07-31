@@ -7,7 +7,7 @@ const FeaturedCategory = () => {
         <div>
             <h1 style={{ fontSize: '36px', textAlign: 'center', fontWeight: 'bold' }}>Featured Catewory</h1>
             <Space style={{ display: 'flex', justifyContent: 'space-between', margin: '0 10px' }}>
-                <Link href='/processor'><Card hoverable style={{ borderColor: 'crimson' }}>Processor</Card></Link>
+                <Link href='/category/processor'><Card hoverable style={{ borderColor: 'crimson' }}>Processor</Card></Link>
                 <Link href='/category/motherboard'><Card hoverable style={{ borderColor: 'crimson' }}>Motherboard</Card></Link>
                 <Link href='/category/ram'><Card hoverable style={{ borderColor: 'crimson' }}>Ram</Card></Link>
                 <Link href='/category/power-supply-unit'><Card hoverable style={{ borderColor: 'crimson' }}>Power Supply Unit </Card></Link>

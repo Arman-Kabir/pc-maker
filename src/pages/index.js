@@ -1,4 +1,5 @@
 import AllProducts from "@/components/UI/AllProducts";
+import FeaturedCategory from "@/components/UI/FeaturedCategory";
 import RootLayout from "@/components/layouts/RootLayout";
 import Head from "next/head";
 
@@ -14,6 +15,7 @@ const HomePage = ({allProducts}) => {
       </Head>
 
       <AllProducts products={featuredProducts.slice(0,6)}></AllProducts>
+      <FeaturedCategory></FeaturedCategory>
     </div>
   )
 };

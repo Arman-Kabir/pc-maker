@@ -19,11 +19,12 @@ const AllProducts = ({ products }) => {
                                     <Image style={{}} src={product?.image} alt='' width={200} height={200}></Image>
                                 </Space>
 
-                                <Space style={{ display: 'flex', justifyContent: 'center' }}>
+                                <Space style={{ display: 'flex', justifyContent: 'space-between', margin: '0 100px' }}>
+                                    <p>{product?.category}</p>
                                     <h1 style={{ color: 'crimson' }}>{product?.price}</h1>
                                     <p>{product?.status}</p>
                                 </Space>
-                                <p>{product?.description?.length > 100 ? product.description.slice(0, 100) + '......'  : product.description}
+                                <p>{product?.description?.length > 100 ? product.description.slice(0, 100) + '......' : product.description}
                                 </p>
                             </Card>
                         </Col>
@@ -31,6 +32,8 @@ const AllProducts = ({ products }) => {
                 }
 
             </Row>
+
+           
         </div>
     )
 };

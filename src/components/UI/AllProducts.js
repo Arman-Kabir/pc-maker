@@ -1,5 +1,6 @@
 import { Button, Card, Col, Row, Space } from 'antd';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 const { Meta } = Card;
 
@@ -13,27 +14,29 @@ const AllProducts = ({ products }) => {
                 {
                     products.map((product) => (
                         <Col key={product.id} span={8}>
-                            <Card bordered={true} hoverable>
-                                <h1 style={{ textAlign: 'center' }}>{product?.name}</h1>
-                                <Space style={{ display: 'flex', justifyContent: "center" }}>
-                                    <Image style={{}} src={product?.image} alt='' width={200} height={200}></Image>
-                                </Space>
+                            <Link href={`/products/${product?.id}`}>
+                                <Card bordered={true} hoverable>
+                                    <h1 style={{ textAlign: 'center' }}>{product?.name}</h1>
+                                    <Space style={{ display: 'flex', justifyContent: "center" }}>
+                                        <Image style={{}} src={product?.image} alt='' width={200} height={200}></Image>
+                                    </Space>
 
-                                <Space style={{ display: 'flex', justifyContent: 'space-between', margin: '0 100px' }}>
-                                    <p>{product?.category}</p>
-                                    <h1 style={{ color: 'crimson' }}>{product?.price}</h1>
-                                    <p>{product?.status}</p>
-                                </Space>
-                                <p>{product?.description?.length > 100 ? product.description.slice(0, 100) + '......' : product.description}
-                                </p>
-                            </Card>
+                                    <Space style={{ display: 'flex', justifyContent: 'space-between', margin: '0 100px' }}>
+                                        <p>{product?.category}</p>
+                                        <h1 style={{ color: 'crimson' }}>{product?.price}</h1>
+                                        <p>{product?.status}</p>
+                                    </Space>
+                                    <p>{product?.description?.length > 100 ? product.description.slice(0, 100) + '......' : product.description}
+                                    </p>
+                                </Card>
+                            </Link>
                         </Col>
                     ))
                 }
 
             </Row>
 
-           
+
         </div>
     )
 };

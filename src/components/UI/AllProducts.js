@@ -4,7 +4,7 @@ import React from 'react';
 const { Meta } = Card;
 
 const AllProducts = ({ products }) => {
-    console.log(products);
+    // console.log(products);
     return (
         <div>
             <h1 style={{ fontSize: '36px', textAlign: 'center', fontWeight: 'bold' }}>Featured Products</h1>

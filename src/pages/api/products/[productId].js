@@ -3,15 +3,17 @@ import connectToMongoDB from "../db";
 
 export default async function handler(req, res) {
     // res.send({ message: 'Server created successfully' });
-    const { productId } = req.query;
-    console.log(productId, typeof (productId));
+    // const { productId } = req.query;
+    // console.log(productId, typeof (productId));
     let client;
     try {
         client = await connectToMongoDB();
         const productsCollection = client.db("pc-maker").collection("products");
         ///////////////
         if (req.method === 'GET') {
-            const product = await productsCollection.findOne({"_id": ObjectId("productId") });
+            const productId =  await req.query.productId;
+            console.log(productId);
+            const product = await productsCollection.findOne({ id:productId});
             res.send({ message: "success", status: 200, data: product });
         }
 

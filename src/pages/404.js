@@ -4,7 +4,7 @@ const ErrorPage = () => {
     const router = useRouter();
     setTimeout(()=>{
         router.push("/");
-    },5000);
+    },50000);
     
   return (
     <div>

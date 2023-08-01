@@ -1,7 +1,7 @@
 import RootLayout from "@/components/layouts/RootLayout";
 import { useRouter } from "next/router";
 
-const CategoryPage = ({allProducts}) => {
+const CategoryPage = ({ allProducts }) => {
     const router = useRouter();
     console.log(allProducts);
     return (
@@ -19,12 +19,13 @@ CategoryPage.getLayout = function getLayout(page) {
     )
 }
 
-export const getServerSideProps = async () => {
-    const res = await fetch("http://localhost:3000/api/products");
+export const getServerSideProps = async (context) => {
+    const {category} = context.query;
+    const res = await fetch(`http://localhost:3000/api/categories/${category}`);
     const data = await res.json();
     return {
-      props:{
-        allProducts:data.data,
-      }
+        props: {
+            allProducts: data.data,
+        }
     }
-  }
+}

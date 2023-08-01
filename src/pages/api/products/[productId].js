@@ -11,13 +11,13 @@ export default async function handler(req, res) {
         const productsCollection = client.db("pc-maker").collection("products");
         ///////////////
         if (req.method === 'GET') {
-            const product = await productsCollection.findOne({ id: productId });
+            const product = await productsCollection.findOne({"_id": ObjectId("productId") });
             res.send({ message: "success", status: 200, data: product });
         }
 
         // console.log("DB connection successful");
     } catch (error) {
-        res.status(500).json({ messgae: 'Internal Server Error', status: 500,error });
+        res.status(500).json({ messgae: 'Internal Server Error', status: 500, error });
     }
 };
 

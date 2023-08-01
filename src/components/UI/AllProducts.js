@@ -10,7 +10,7 @@ const AllProducts = ({ products, children }) => {
     const components = useSelector((state) => state.components.components);
     const dispatch = useDispatch();
 
-    const handleAddComponent=(component)=>{
+    const handleAddComponent = (component) => {
         // dispatch(addComponent(component));
     }
     // console.log(products);
@@ -45,7 +45,7 @@ const AllProducts = ({ products, children }) => {
                                 {
                                     // handleAddComponent(product)
                                     // href="/pc-builder" 
-                                    children && <Button onClick={() =>dispatch(addComponent(product))} type="primary">Add to Builder</Button>
+                                    children && <Link href='/pc-builder'><Button onClick={() => dispatch(addComponent(product))} type="primary"> Add to Builder </Button></Link>
                                 }
                             </div>
 

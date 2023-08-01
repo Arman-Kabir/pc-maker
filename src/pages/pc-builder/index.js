@@ -1,17 +1,19 @@
+import PcBuilderComponent from '@/components/UI/PcBuilderComponent'
 import RootLayout from '@/components/layouts/RootLayout'
-import { Button, Card, Space } from 'antd'
+import { Button, Card, Col, Row, Space } from 'antd'
 import Link from 'next/link'
 import React from 'react'
 import { useSelector } from 'react-redux'
 
 const PcBuilder = () => {
-    const components = useSelector((state) => state.components);
-    console.log(components);
+    const components = useSelector((state) => state.components.components);
+    // console.log(components);
     return (
-        <div>
-            <Space style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', margin: '10px 0', width: '500px' }}>
+        <div style={{ display: 'grid',gridAutoColumns:'1fr 1fr' }}>
 
-                <Link href='/pc-builder/processor'><Card hoverable style={{ borderColor: 'crimson', }}>Processor <Button type='primary'>Choose</Button> </Card></Link>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', margin: '10px 0', width: '500px' }}>
+
+                <Link href='/pc-builder/processor'><Card hoverable style={{ borderColor: 'crimson', width: '500px' }}>Processor <Button type='primary'>Choose</Button> </Card></Link>
 
 
                 <Link href='/pc-builder/motherboard'><Card hoverable style={{ borderColor: 'crimson' }}>Motherboard <Button type='primary'>Choose</Button></Card></Link>
@@ -26,10 +28,21 @@ const PcBuilder = () => {
 
                 <Link href='/category/others'><Card hoverable style={{ borderColor: 'crimson' }}>Others  <Button type='primary'>Choose</Button></Card></Link>
 
-            </Space>
-            <Space>
+            </div>
 
-            </Space>
+
+
+            <div>
+                {
+                    components.map((component) => (
+                        <PcBuilderComponent key={component.id} component={component}>Hello</PcBuilderComponent>
+                       
+                    ))
+                }
+            </div>
+
+
+
         </div>
     )
 }

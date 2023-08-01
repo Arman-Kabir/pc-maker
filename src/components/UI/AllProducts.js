@@ -14,9 +14,9 @@ const AllProducts = ({ products, children }) => {
                 {
                     products.map((product) => (
                         <Col key={product.id} span={8}>
-                            <Card bordered={true} hoverable style={{color:'black'}}>
 
-                                <Link href={`/products/${product?.id}`} style={{color:'none'}}>
+                            <Link href={`/products/${product?.id}`} style={{ color: 'none' }}>
+                                <Card bordered={true} hoverable style={{ color: 'black' }}>
                                     <h1 style={{ textAlign: 'center' }}>{product?.name}</h1>
                                     <Space style={{ display: 'flex', justifyContent: "center" }}>
                                         <Image style={{}} src={product?.image} alt='' width={200} height={200}></Image>
@@ -30,14 +30,14 @@ const AllProducts = ({ products, children }) => {
                                     <p>{product?.description?.length > 100 ? product.description.slice(0, 100) + '......' : product.description}
                                     </p>
 
-                                </Link>
-                                
-                                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                    {
-                                        children
-                                    }
-                                </div>
-                            </Card>
+                                </Card>
+                            </Link>
+
+                            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                {
+                                    children
+                                }
+                            </div>
 
                         </Col>
                     ))

@@ -9,7 +9,7 @@ const CategoryPage = ({ allProducts }) => {
     return (
         <div>CategoryPageeee:{router.query.category}
             <AllProducts products={allProducts}>
-                <Button type="primary">Add to Builder</Button>
+                <Button href="/pc-builder" type="primary">Add to Builder</Button>
             </AllProducts>
         </div>
     )

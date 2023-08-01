@@ -20,9 +20,9 @@ const RootLayout = ({ children }) => {
                     }}
                 >
                     <div className="demo-logo" style={{ color: "white", fontWeight: "bold", fontSize: "30px" }}>
-                        PC-Maker
+                        <Link href='/'>PC-Maker</Link>
                     </div>
-                    <Button type="primary" small>
+                    <Button type="primary">
                         <Link href='/pc-builder'>PC BUILDER</Link>
                     </Button>
 

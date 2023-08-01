@@ -1,25 +1,20 @@
-import { ObjectId } from "mongodb";
 import connectToMongoDB from "../db";
 
 export default async function handler(req, res) {
     // res.send({ message: 'Server created successfully' });
-    // const { productId } = req.query;
-    // console.log(productId, typeof (productId));
     let client;
     try {
         client = await connectToMongoDB();
         const productsCollection = client.db("pc-maker").collection("products");
         ///////////////
         if (req.method === 'GET') {
-            const productId =  await req.query.productId;
-            // console.log(productId);
-            const product = await productsCollection.findOne({ id:productId});
-            res.send({ message: "success", status: 200, data: product });
+            const products = await productsCollection.find({}).toArray();
+            res.send({ message: "success", status: 200, data: products });
         }
 
         // console.log("DB connection successful");
     } catch (error) {
-        res.status(500).json({ messgae: 'Internal Server Error', status: 500, error });
+        res.status(500).json({ messgae: 'Internal Server Error', status: 500 });
     }
 };
 

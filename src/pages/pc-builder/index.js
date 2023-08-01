@@ -19,8 +19,8 @@ const categoryCardStyle = {
 const selectedCardStyle = {
     padding: '0px',
     border: '1px solid rgba(0,0,0,.18)',
-    borderRadius: '10px',   
-    margin: '0px 20px 5px 20px',   
+    borderRadius: '10px',
+    margin: '0px 20px 5px 20px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -63,7 +63,7 @@ const PcBuilder = () => {
                             <div key={component.id} style={selectedCardStyle}>
                                 <Title style={{ padding: '0px', margin: '0px' }} level={5}>{component.name}</Title>
 
-                                <div style={{display:'flex',alignItems:'center'}}>
+                                <div style={{ display: 'flex', alignItems: 'center' }}>
                                     <div>
                                         <Image style={{ width: '100px', padding: '0px', margin: '0px' }} src={component.image} alt='component-image'></Image>
                                     </div>
@@ -74,6 +74,10 @@ const PcBuilder = () => {
                                 </div>
                             </div>
                         ))
+
+                    }
+                    {
+                        count >= 5 ? <Button type='primary'>Complete Build</Button> : <Button disabled>Complete Build</Button>
                     }
                 </Col>
             </Row>

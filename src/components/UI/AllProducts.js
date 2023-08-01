@@ -4,7 +4,7 @@ import Link from 'next/link';
 import React from 'react';
 const { Meta } = Card;
 
-const AllProducts = ({ products }) => {
+const AllProducts = ({ products, children }) => {
     // console.log(products);
     return (
         <div>
@@ -14,8 +14,9 @@ const AllProducts = ({ products }) => {
                 {
                     products.map((product) => (
                         <Col key={product.id} span={8}>
-                            <Link href={`/products/${product?.id}`}>
-                                <Card bordered={true} hoverable>
+                            <Card bordered={true} hoverable style={{color:'black'}}>
+
+                                <Link href={`/products/${product?.id}`} style={{color:'none'}}>
                                     <h1 style={{ textAlign: 'center' }}>{product?.name}</h1>
                                     <Space style={{ display: 'flex', justifyContent: "center" }}>
                                         <Image style={{}} src={product?.image} alt='' width={200} height={200}></Image>
@@ -28,8 +29,16 @@ const AllProducts = ({ products }) => {
                                     </Space>
                                     <p>{product?.description?.length > 100 ? product.description.slice(0, 100) + '......' : product.description}
                                     </p>
-                                </Card>
-                            </Link>
+
+                                </Link>
+                                
+                                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                    {
+                                        children
+                                    }
+                                </div>
+                            </Card>
+
                         </Col>
                     ))
                 }
@@ -37,7 +46,7 @@ const AllProducts = ({ products }) => {
             </Row>
 
 
-        </div>
+        </div >
     )
 };
 

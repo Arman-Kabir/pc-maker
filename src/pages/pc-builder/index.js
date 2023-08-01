@@ -1,7 +1,8 @@
-import PcBuilderComponent from '@/components/UI/PcBuilderComponent'
+
 import RootLayout from '@/components/layouts/RootLayout'
-import { Button, Card, Col, Row, Space } from 'antd'
-import Image from 'next/image'
+import { Button, Card, Col, Image, Row, Space, Tag } from 'antd'
+import Title from 'antd/es/typography/Title'
+
 import Link from 'next/link'
 import React from 'react'
 import { useSelector } from 'react-redux';
@@ -16,12 +17,12 @@ const categoryCardStyle = {
     alignItems: 'center',
 }
 const selectedCardStyle = {
-    height: '100px',
-    margin: '5px 0px',
-    // backgroundColor:'black',
-    // color:'white',
-    // borderColor: 'crimson',
+    padding: '0px',
+    border: '1px solid rgba(0,0,0,.18)',
+    borderRadius: '10px',   
+    margin: '0px 20px 5px 20px',   
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
 }
 
@@ -33,36 +34,45 @@ const PcBuilder = () => {
     // console.log(components);
     return (
         <div>
-            <h1 style={{textAlign:'center',margin:'20px'}}>PC BUILDER Page</h1>
+            <h1 style={{ textAlign: 'center', margin: '20px' }}>PC BUILDER Page</h1>
             <Row gutter={[16, 16]}>
                 <Col span={12}>
-                    <h2 style={{textAlign:'center',margin:'20px'}}>Select Components</h2>
+                    <h2 style={{ textAlign: 'center', margin: '20px' }}>Select Components</h2>
                     {
                         categories.map((category) => (
                             // console.log(category)
                             <Row gutter={[16, 16]} key={category}>
                                 <Col span={12}>
                                     <Card hoverable style={categoryCardStyle}>
-                                        <span style={{ fontWeight: 'bold', paddingRight: '25px',textTransform:'uppercase' }}>{category}</span>
+                                        <span style={{ fontWeight: 'bold', paddingRight: '25px', textTransform: 'uppercase' }}>{category}</span>
 
                                         <Button type='primary'><Link href={`/pc-builder/${category}`}>Choose</Link></Button>
                                     </Card>
-                                </Col>                              
+                                </Col>
                             </Row>
                         ))
                     }
                 </Col>
 
                 <Col span={12}>
-                    <h2 style={{textAlign:'center',margin:'20px'}}>Selected Components: {count} selected</h2>
+                    <h2 style={{ textAlign: 'center', margin: '20px' }}>Selected Components: {count} selected</h2>
                     {
                         components.map((component) => (
                             // <PcBuilderComponent key={component.id} component={component}>Hello</PcBuilderComponent>
 
-                            <Card key={component.id} style={selectedCardStyle}>
-                                <Image src={component.image} width={'100'} height={'100'} alt='component-image'></Image>
-                                <p>{component.name}</p>
-                            </Card>
+                            <div key={component.id} style={selectedCardStyle}>
+                                <Title style={{ padding: '0px', margin: '0px' }} level={5}>{component.name}</Title>
+
+                                <div style={{display:'flex',alignItems:'center'}}>
+                                    <div>
+                                        <Image style={{ width: '100px', padding: '0px', margin: '0px' }} src={component.image} alt='component-image'></Image>
+                                    </div>
+                                    <div>
+                                        <Tag color="magenta">Price : {component.price}</Tag>
+                                        <Tag color="magenta">{component.category}</Tag>
+                                    </div>
+                                </div>
+                            </div>
                         ))
                     }
                 </Col>

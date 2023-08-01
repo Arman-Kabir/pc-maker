@@ -1,10 +1,18 @@
+import { addComponent } from '@/redux/api/componentsSlice';
 import { Button, Card, Col, Row, Space } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 const { Meta } = Card;
 
 const AllProducts = ({ products, children }) => {
+    const components = useSelector((state) => state.components.components);
+    const dispatch = useDispatch();
+
+    const handleAddComponent=(component)=>{
+        // dispatch(addComponent(component));
+    }
     // console.log(products);
     return (
         <div>
@@ -35,7 +43,9 @@ const AllProducts = ({ products, children }) => {
 
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
                                 {
-                                    children
+                                    // handleAddComponent(product)
+                                    // href="/pc-builder" 
+                                    children && <Button onClick={() =>dispatch(addComponent(product))} type="primary">Add to Builder</Button>
                                 }
                             </div>
 

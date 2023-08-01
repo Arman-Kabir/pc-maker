@@ -2,8 +2,11 @@ import RootLayout from '@/components/layouts/RootLayout'
 import { Button, Card, Space } from 'antd'
 import Link from 'next/link'
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const PcBuilder = () => {
+    const components = useSelector((state) => state.components);
+    console.log(components);
     return (
         <div>
             <Space style={{ display: 'flex', flexDirection: 'column', alignItems: 'start', margin: '10px 0', width: '500px' }}>

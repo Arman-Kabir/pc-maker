@@ -1,15 +1,19 @@
 import AllProducts from "@/components/UI/AllProducts";
 import RootLayout from "@/components/layouts/RootLayout";
+import { addComponent } from "@/redux/api/componentsSlice";
 import { Button } from "antd";
 import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
 
 const CategoryPage = ({ allProducts }) => {
+    const components = useSelector((state) => state.components.components);
     const router = useRouter();
+
     console.log(allProducts);
     return (
         <div>CategoryPageeee:{router.query.category}
             <AllProducts products={allProducts}>
-                <Button href="/pc-builder" type="primary">Add to Builder</Button>
+                pc-builder
             </AllProducts>
         </div>
     )

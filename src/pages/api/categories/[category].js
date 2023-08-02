@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-import connectToMongoDB from "../db";
+import connectToMongoDB from "../../../../db";
 
 export default async function handler(req, res) {
     let client;

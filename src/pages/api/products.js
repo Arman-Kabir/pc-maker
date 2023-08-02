@@ -1,4 +1,4 @@
-import connectToMongoDB from "./db";
+import connectToMongoDB from "../../../db";
 
 export default async function handler(req, res) {
     
@@ -8,7 +8,7 @@ export default async function handler(req, res) {
         const productsCollection = client.db("pc-maker").collection("products");
         ///////////////
         if (req.method === 'GET') {
-            const productId =  await req.query.productId;
+            // const productId =  await req.query.productId;
             const products = await productsCollection.find({}).toArray();
             res.send({ message: "success", status: 200, data: products });
         }

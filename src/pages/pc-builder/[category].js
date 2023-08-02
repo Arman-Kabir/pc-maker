@@ -9,7 +9,7 @@ const CategoryPage = ({ allProducts }) => {
     const components = useSelector((state) => state.components.components);
     const router = useRouter();
 
-    console.log(allProducts);
+    // console.log(allProducts);
     return (
         <div>CategoryPageeee:{router.query.category}
             <AllProducts products={allProducts}>

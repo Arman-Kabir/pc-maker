@@ -50,13 +50,10 @@ const ProductDetail = ({ product }) => {
                     </Card>
 
                 </Col>
-
-
             </Row>
         </div >
     )
 }
-
 export default ProductDetail;
 
 ProductDetail.getLayout = function getLayout(page) {
@@ -84,7 +81,7 @@ export const getStaticProps = async (context) => {
     const res = await fetch(`http://localhost:3000/api/products/${id}`);
     // const res = await fetch(`http://localhost:5000/products/${productId}`);
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     return {
         props: {
             product: data.data,

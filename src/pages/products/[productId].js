@@ -1,11 +1,11 @@
 import RootLayout from "@/components/layouts/RootLayout";
-import { Card, Col,  Row } from "antd";
+import { Badge, Card, Col, Image, Row, Tag } from "antd";
 
-import Image from "next/image";
+
 import { useRouter } from "next/router";
-// import fetch from 'node-fetch';
 
 const ProductDetail = ({ product }) => {
+    console.log(product);
     const router = useRouter();
     return (
         <div>
@@ -15,12 +15,45 @@ const ProductDetail = ({ product }) => {
                 </Col>
 
                 <Col span={12}>
-                    
+                    <Card style={{ margin: '50px 0px' }} hoverable>
+                        <h3 >{product.name}</h3>
+
+                        <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: '25px' }}>
+                            <Tag color="red">Price: <span style={{ fontWeight: 'bold' }}>{product.price}</span></Tag>
+                            <Tag color="cyan">Category: <span style={{ fontWeight: 'bold' }}>{product.category}</span></Tag>
+                            <Tag color="blue">Status:<span style={{ fontWeight: 'bold' }}> {product.status}</span></Tag>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+                            <Badge count={product.rating}><Tag color='warning'>Rating</Tag></Badge>
+                            <Badge count={product['individual-rating']}><Tag color='warning'>Individual Rating</Tag></Badge>
+                            <Badge count={product['average rating']}><Tag color='warning'>Average Rating</Tag></Badge>
+
+                        </div>
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '25px 0px' }}>
+                            <h3 style={{ margin: '0', color: 'navyblue' }}>Reviews</h3>
+                            {
+                                product.reviews.map((review) => (
+                                    <p style={{ margin: '0' }} key={review}>{review}</p>
+                                ))
+                            }
+                        </div>
+
+                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '25px 0px' }}>
+                            <h3 style={{ margin: '0', color: 'navyblue' }}>Key Features</h3>
+                            {
+                                product['key-features']
+                                    .map((features) => (
+                                        <p style={{ margin: '0' }} key={features}>{features}</p>
+                                    ))
+                            }
+                        </div>
+                    </Card>
+
                 </Col>
 
 
             </Row>
-        </div>
+        </div >
     )
 }
 

@@ -9,7 +9,7 @@ const ErrorPage = () => {
 
   return (
     <div>
-      <Image src="https://colorlib.com/wp/wp-content/uploads/sites/2/404-error-page-templates.jpg" alt="" width={100} height={100} />
+      <Image src="https://colorlib.com/wp/wp-content/uploads/sites/2/404-error-page-templates.jpg" alt="" width={500} height={500} />
     </div>
   )
 }

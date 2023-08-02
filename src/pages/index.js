@@ -4,9 +4,9 @@ import RootLayout from "@/components/layouts/RootLayout";
 
 import Head from "next/head";
 
-const HomePage = ({allProducts}) => {
-  
-  const featuredProducts = allProducts?.filter((product)=>product.featured == true);
+const HomePage = ({ allProducts }) => {
+
+  const featuredProducts = allProducts?.filter((product) => product.featured == true);
   // console.log(featuredProducts);
   return (
     <div>
@@ -14,8 +14,11 @@ const HomePage = ({allProducts}) => {
         <title>PC-Maker home Page</title>
         <meta name='home page' description=""></meta>
       </Head>
+      
+      <h1 style={{ fontSize: '36px', textAlign: 'center', fontWeight: 'bold' }}>Featured Products</h1>
+      <AllProducts products={featuredProducts.slice(0, 6)}></AllProducts>
 
-      <AllProducts products={featuredProducts.slice(0,6)}></AllProducts>
+      <h1 style={{ fontSize: '36px', textAlign: 'center', fontWeight: 'bold' }}>Featured Catewory</h1>
       <FeaturedCategory></FeaturedCategory>
     </div>
   )
@@ -35,9 +38,9 @@ export const getStaticProps = async () => {
   // const res = await fetch("http://localhost:5000/products");
   const data = await res.json();
   return {
-    props:{
-      allProducts:data.data,
+    props: {
+      allProducts: data.data,
     },
-    revalidate:10,
+    revalidate: 10,
   }
 }

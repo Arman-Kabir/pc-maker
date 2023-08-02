@@ -31,7 +31,7 @@ const PcBuilder = () => {
     const components = useSelector((state) => state.components.components);
     const count = useSelector((state) => state.components.count);
 
-    const categories = ['processor', 'motherboard', 'ram', 'power-supply-unit', 'storage-device', 'monitor', 'others'];
+    const categories = ['processor', 'motherboard', 'ram', 'power-supply', 'storage-device', 'monitor', 'others'];
     // console.log(components);
     return (
         <div>

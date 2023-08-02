@@ -16,7 +16,7 @@ const AllProducts = ({ products, children }) => {
     // console.log(products);
     return (
         <div>
-            <h1 style={{ fontSize: '36px', textAlign: 'center', fontWeight: 'bold' }}>Featured Products</h1>
+            
 
             <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 {

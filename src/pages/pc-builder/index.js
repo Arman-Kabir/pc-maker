@@ -1,7 +1,8 @@
 
 import RootLayout from '@/components/layouts/RootLayout'
 import { Button, Card, Col, Image, Row, Space, Tag } from 'antd'
-import Title from 'antd/es/typography/Title'
+
+
 
 import Link from 'next/link'
 import React from 'react'
@@ -61,7 +62,7 @@ const PcBuilder = () => {
                             // <PcBuilderComponent key={component.id} component={component}>Hello</PcBuilderComponent>
 
                             <div key={component.id} style={selectedCardStyle}>
-                                <Title style={{ padding: '0px', margin: '0px' }} level={5}>{component.name}</Title>
+                                <h3 style={{ padding: '0px', margin: '0px' }} level={5}>{component.name}</h3>
 
                                 <div style={{ display: 'flex', alignItems: 'center' }}>
                                     <div>

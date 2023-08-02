@@ -1,6 +1,6 @@
 import RootLayout from "@/components/layouts/RootLayout";
 import { useRouter } from "next/router";
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
 const ProductDetail = ({ product }) => {
     const router = useRouter();
@@ -24,6 +24,7 @@ ProductDetail.getLayout = function getLayout(page) {
 
 export const getStaticPaths = async()=>{
     const res = await fetch("http://localhost:3000/api/products");
+    // const res = await fetch("http://localhost:5000/products");
     const products = await res.json();
 
     const paths = products?.data?.map((product)=>({
@@ -36,6 +37,7 @@ export const getStaticProps = async (context) => {
     const {params} = context;
     const productId = params?.productId;
     const res = await fetch(`http://localhost:3000/api/products/${productId}`);
+    // const res = await fetch(`http://localhost:5000/products/${productId}`);
     const data = await res.json();
     return {
         props: {

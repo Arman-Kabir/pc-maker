@@ -59,7 +59,6 @@ const PcBuilder = () => {
                     <h2 style={{ textAlign: 'center', margin: '20px' }}>Selected Components: {count} selected</h2>
                     {
                         components.map((component) => (
-                            // <PcBuilderComponent key={component.id} component={component}>Hello</PcBuilderComponent>
 
                             <div key={component.id} style={selectedCardStyle}>
                                 <h3 style={{ padding: '0px', margin: '0px' }} level={5}>{component.name}</h3>

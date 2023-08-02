@@ -2,9 +2,9 @@ import connectToMongoDB from "./db";
 
 export default async function handler(req, res) {
     let client;
-    client = await connectToMongoDB();
+    client =  connectToMongoDB();
     try {
-        const productsCollection = client.db("pc-maker").collection("products");
+        const productsCollection = await client.db("pc-maker").collection("products");
         ///////////////
         if (req.method === 'GET') {
             const products = await productsCollection.find({}).toArray();

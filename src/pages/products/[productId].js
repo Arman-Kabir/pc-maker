@@ -6,7 +6,7 @@ const ProductDetail = ({ product }) => {
     const router = useRouter();
     return (
         <div>
-            <div>ProductDetail: {router.query.productId}</div>
+            <div>ProductDetail: {router?.query?.productId}</div>
             <div>Name {product?.name}</div>
         </div>
     )

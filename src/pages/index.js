@@ -1,14 +1,11 @@
 import AllProducts from "@/components/UI/AllProducts";
 import FeaturedCategory from "@/components/UI/FeaturedCategory";
 import RootLayout from "@/components/layouts/RootLayout";
-import { useGetProductsQuery } from "@/redux/api/api";
+
 import Head from "next/head";
 
 const HomePage = ({allProducts}) => {
-  //rtk query data fetching
-  // const {data,isLoading,isError,error} = useGetProductsQuery();
-  // console.log(data);
-  // console.log(allProducts);
+  
   const featuredProducts = allProducts?.filter((product)=>product.featured == true);
   // console.log(featuredProducts);
   return (

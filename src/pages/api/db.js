@@ -14,10 +14,10 @@ async function connectToMongoDB() {
 
     try {
         await client.connect();
-        // console.log('DB connected');
+        console.log('DB connected');
         return client;
     } catch (error) {
-        // console.log('Error connecting to DB')
+        console.log('Error connecting to DB')
     }
 };
 

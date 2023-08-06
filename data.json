@@ -49,7 +49,7 @@
       "category": "processor",
       "status": "in-stock",
       "rating": "5",
-      "description": "The Intel Pentium Gold G6405 Coffee Lake Processor comes with 4M Cache, 4.10 GHz Processor Base Frequency. This Intel Pentium Gold G6405 processor comes with a new breed that has an integrated Intel UHD Graphics 610, so a separate graphics card is not required for its functionality. This new Comet Lake microarchitecture is manufactured with the 14nm process (Lithography) that comes with 2 cores and HyperThreading. As this chip is updated to the latest BIOS revision, it nicely fits into any Intel 300-series motherboard. Focusing on this, all the major motherboard manufacturers have already started BIOS updates for their 300-series lineup Additionally, this Intel Pentium Gold G6405 processor also supports dual-channel 2666 MHz DDR4 memory and utilizes 10th-generation Intel technology.",
+      "description": "The Intel Pentium Gold G6405 Coffee Lake Processor comes with 4M Cache, 4.10 GHz Processor Base Frequency. This Intel Pentium Gold G6405 processor comes with a new breed that has an integrated Intel UHD Graphics 610, so a separate graphics card is not required for its functionality. This new Comet Lake microarchitecture is manufactured with the 14nm process (Lithography) that comes with 2 cores and HyperThreading. As this chip is updated to the latest BIOS revision, it nicely fits into any Intel 300-series motherboard.",
       "key-features": ["2 cores, 4 threads", "2666Mhz Ram Utilized"],
       "individual-rating": "5",
       "average rating": "5",
@@ -247,7 +247,7 @@
       "reviews": ["Good for eyes", "eye saver mode"]
     },
     {
-      "id":" 17",
+      "id":"17",
       "name": "Samsung Odyssey G9 C49G95TSSW 49'' 240Hz G-Sync Dual-QHD Curved Gaming Monitor",
       "image": "https://www.startech.com.bd/image/cache/catalog/monitor/samsung/c49g95tssw/c49g95tssw-1-500x500.jpg",
       "price": "196500",

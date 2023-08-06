@@ -11,11 +11,15 @@ const LoginPage = () => {
             <Head>
                 <title>Next Login</title>
             </Head>
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '100vh',backgroundColor:'rgba(0,0,255,.35)' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', backgroundColor: 'rgba(0,0,255,.35)' }}>
                 <h1>LOGIN</h1>
 
                 <div style={{ fontSize: '40px', height: '25px' }}>
-                    <GithubOutlined onClick={()=>{signIn("github")}} />
+                    <GithubOutlined onClick={() => {
+                        signIn("github", {
+                            callbackUrl:'http://localhost:3000/'
+                        })
+                    }} />
                 </div>
             </div>
         </div>

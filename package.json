@@ -9,7 +9,6 @@
     "json-server": "json-server --watch data.json --port 5000",
     "lint": "next lint"
   },
-  
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
     "@reduxjs/toolkit": "^1.9.5",
@@ -20,6 +19,7 @@
     "json-server": "^0.17.3",
     "mongodb": "^5.7.0",
     "next": "13.4.12",
+    "next-auth": "^4.22.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "^8.1.2",

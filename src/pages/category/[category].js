@@ -4,10 +4,10 @@ import { useRouter } from "next/router";
 
 
 const Category = ({ allProducts }) => {
-  const router = useRouter();
+  // const router = useRouter();
   console.log(allProducts);
   return (
-    <div>Category:{router.query.category}
+    <div>
       <AllProducts products={allProducts}>
       </AllProducts>
     </div>
@@ -25,12 +25,12 @@ Category.getLayout = function getLayout(page) {
 }
 
 export const getServerSideProps = async (context) => {
-  const { category } = context.query;
-  const res = await fetch(`http://localhost:3000/api/categories/${category}`);
+  const { category } = context.params;
+  const res = await fetch(`https://pc-maker-backend.vercel.app/categories/${category}`);
   const data = await res.json();
   return {
     props: {
-      allProducts: data.data,
+      allProducts: data,
     }
   }
 }

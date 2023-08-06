@@ -5,7 +5,7 @@ import { Badge, Card, Col, Image, Row, Tag } from "antd";
 import { useRouter } from "next/router";
 
 const ProductDetail = ({ product }) => {
-    console.log(product);
+    // console.log(product);
     const router = useRouter();
     return (
         <div>
@@ -65,11 +65,11 @@ ProductDetail.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-    const res = await fetch("http://localhost:3000/api/products");
-    // const res = await fetch("http://localhost:5000/products");
+    const res = await fetch("https://pc-maker-backend.vercel.app/products");
     const products = await res.json();
+    // console.log(products);
 
-    const paths = products?.data?.map((product) => ({
+    const paths = products?.map((product) => ({
         params: { id: product?.id }
     }))
     return { paths, fallback: true }
@@ -78,13 +78,12 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
     const { params } = context;
     const id = params?.id;
-    const res = await fetch(`http://localhost:3000/api/products/${id}`);
-    // const res = await fetch(`http://localhost:5000/products/${productId}`);
+    const res = await fetch(`https://pc-maker-backend.vercel.app/products/${id}`);
     const data = await res.json();
     // console.log(data);
     return {
         props: {
-            product: data.data,
+            product: data,
         },
     }
 }

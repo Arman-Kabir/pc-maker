@@ -7,11 +7,11 @@ import { useDispatch, useSelector } from "react-redux";
 
 const CategoryPage = ({ allProducts }) => {
     const components = useSelector((state) => state.components.components);
-    const router = useRouter();
+    // const router = useRouter();
 
     // console.log(allProducts);
     return (
-        <div>CategoryPageeee:{router.query.category}
+        <div>
             <AllProducts products={allProducts}>
                 pc-builder
             </AllProducts>
@@ -30,12 +30,13 @@ CategoryPage.getLayout = function getLayout(page) {
 }
 
 export const getServerSideProps = async (context) => {
-    const { category } = context.query;
-    const res = await fetch(`http://localhost:3000/api/categories/${category}`);
+    // console.log(context.query);
+    const { category } = context.params;
+    const res = await fetch(`https://pc-maker-backend.vercel.app/categories/${category}`);
     const data = await res.json();
     return {
         props: {
-            allProducts: data.data,
+            allProducts: data,
         }
     }
 }

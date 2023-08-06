@@ -1,12 +1,10 @@
 import RootLayout from "@/components/layouts/RootLayout";
 import { Badge, Card, Col, Image, Row, Tag } from "antd";
-
-
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 const ProductDetail = ({ product }) => {
     // console.log(product);
-    const router = useRouter();
+    // const router = useRouter();
     return (
         <div>
             <Row gutter={[16, 16]}>

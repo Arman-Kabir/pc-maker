@@ -34,12 +34,12 @@ HomePage.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/products");
+  const res = await fetch("https://pc-maker-backend.vercel.app/products");
   // const res = await fetch("http://localhost:5000/products");
   const data = await res.json();
   return {
     props: {
-      allProducts: data.data,
+      allProducts: data,
     },
     revalidate: 10,
   }

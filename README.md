@@ -1,3 +1,13 @@
+
+## Backend APi Routes
+
+    https://pc-maker-backend.vercel.app/products
+    https://pc-maker-backend.vercel.app/products/${id}
+    https://pc-maker-backend.vercel.app/categories/${category}
+
+
+
+
 ## Problems
 
       I did everything that is required.

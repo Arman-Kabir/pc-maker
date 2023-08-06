@@ -4,8 +4,12 @@ const { Header, Content, Footer } = Layout;
 import { AppstoreOutlined, MailOutlined, SettingOutlined, SmileOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import items from '@/utils/dropdown-items';
+import { useSession, signIn, signOut } from "next-auth/react"
 
 const RootLayout = ({ children }) => {
+    const { data: session } = useSession();
+    console.log("from header", session);
+
     const {
         token: { colorBgContainer },
     } = theme.useToken();
@@ -26,9 +30,16 @@ const RootLayout = ({ children }) => {
                         <Link href='/pc-builder'>PC BUILDER</Link>
                     </Button>
 
-                    <Dropdown menu={{ items }}>
-                        <Space style={{ color: "white", fontWeight: "bold", fontSize: "24px" }}>Categories</Space>
-                    </Dropdown>
+                    <div>
+                        <Dropdown menu={{ items }}>
+                            <Space style={{ color: "white", fontWeight: "bold", fontSize: "24px" }}>Categories</Space>
+                        </Dropdown>
+                        {
+                            session?.user ?
+                                <Button onClick={()=>signOut()}>Logout</Button> :
+                                <Link href='/login'><Button>Login</Button></Link>
+                        }
+                    </div>
                 </Header>
 
                 <Content

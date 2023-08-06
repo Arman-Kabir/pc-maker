@@ -1,5 +1,6 @@
 import RootLayout from '@/components/layouts/RootLayout';
 import { GithubOutlined } from '@ant-design/icons';
+import { signIn } from 'next-auth/react';
 import Head from 'next/head';
 import { useForm } from "react-hook-form";
 
@@ -12,9 +13,9 @@ const LoginPage = () => {
             </Head>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', minHeight: '100vh',backgroundColor:'rgba(0,0,255,.35)' }}>
                 <h1>LOGIN</h1>
-                
+
                 <div style={{ fontSize: '40px', height: '25px' }}>
-                    <GithubOutlined onClick={()=>{console.log('clicked')}} />
+                    <GithubOutlined onClick={()=>{signIn("github")}} />
                 </div>
             </div>
         </div>

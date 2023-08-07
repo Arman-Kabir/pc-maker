@@ -5,10 +5,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Image from 'next/image';
-import SingleSlide from './SingleSlide';
+
 
 const Slider = ({ products }) => {
-    console.log(products);
+    // console.log(products);
     return (
 
         <Swiper
@@ -22,12 +22,10 @@ const Slider = ({ products }) => {
             onSwiper={(swiper) => console.log(swiper)}
         >
             {
-                products?.map((product) => {
+                products?.map((product) => (
+                    <SwiperSlide key={product.id}><Image src={product.image} width={500} height={500} alt='swiper image'></Image></SwiperSlide>
 
-                    <SingleSlide key={product.id} product={product}>
-
-                    </SingleSlide>
-                })
+                ))
             }
 
 

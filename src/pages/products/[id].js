@@ -63,7 +63,8 @@ ProductDetail.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-    const res = await fetch("https://pc-maker-backend.vercel.app/products");
+    // const res = await fetch("https://pc-maker-backend.vercel.app/products");
+    const res = await fetch("https://pc-maker-backend.onrender.com/products");
     const products = await res.json();
     // console.log(products);
 
@@ -75,7 +76,8 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
     const { id } = context?.params;
-    const res = await fetch(`https://pc-maker-backend.vercel.app/products/${id}`);
+    // const res = await fetch(`https://pc-maker-backend.vercel.app/products/${id}`);
+    const res = await fetch(`https://pc-maker-backend.onrender.com/products/${id}`);
     const data = await res.json();
     // console.log(data);
     return {

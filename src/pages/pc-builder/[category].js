@@ -32,7 +32,8 @@ CategoryPage.getLayout = function getLayout(page) {
 export const getServerSideProps = async (context) => {
     // console.log(context.query);
     const { category } = context.params;
-    const res = await fetch(`https://pc-maker-backend.vercel.app/categories/${category}`);
+    // const res = await fetch(`https://pc-maker-backend.vercel.app/categories/${category}`);
+    const res = await fetch(`https://pc-maker-backend.onrender.com/categories/${category}`);
     const data = await res.json();
     return {
         props: {

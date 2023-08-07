@@ -40,7 +40,8 @@ HomePage.getLayout = function getLayout(page) {
 };
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://pc-maker-backend.vercel.app/products");
+  // const res = await fetch("https://pc-maker-backend.vercel.app/products");
+  const res = await fetch("https://pc-maker-backend.onrender.com/products");
   const data = await res.json();
   return {
     props: {

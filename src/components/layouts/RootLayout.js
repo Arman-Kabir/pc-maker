@@ -44,7 +44,7 @@ const RootLayout = ({ children }) => {
 
                 <Content
                     style={{
-                        padding: '0 300px',
+                        padding: '0 15%',
                     }}
                 >
                     <div

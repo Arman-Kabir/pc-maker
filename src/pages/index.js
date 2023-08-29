@@ -1,5 +1,6 @@
 import AllProducts from "@/components/UI/AllProducts";
 import FeaturedCategory from "@/components/UI/FeaturedCategory";
+import HeroSection from "@/components/UI/HeroSection";
 import Slider from "@/components/UI/Slider";
 import RootLayout from "@/components/layouts/RootLayout";
 
@@ -16,6 +17,8 @@ const HomePage = ({ allProducts }) => {
         <meta name='home page' description=""></meta>
       </Head>
       
+      <HeroSection></HeroSection>
+
       <Slider products={featuredProducts}></Slider>
 
 

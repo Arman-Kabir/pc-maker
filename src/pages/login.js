@@ -17,7 +17,7 @@ const LoginPage = () => {
                 <div style={{ fontSize: '40px', height: '25px' }}>
                     <GithubOutlined onClick={() => {
                         signIn("github", {
-                            callbackUrl:'http://localhost:3000/'
+                            callbackUrl:'https://pc-maker-fm3f.vercel.app/'
                         })
                     }} />
                 </div>

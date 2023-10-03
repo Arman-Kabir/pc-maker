@@ -15,13 +15,13 @@ const AllProducts = ({ products, children }) => {
     }
     // console.log(products);
     return (
-        <div>
+        <div style={{margin:'0 auto'}}>
             
 
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+            <Row gutter={[8, 16, 24]}>
                 {
                     products.map((product) => (
-                        <Col key={product.id} span={8}>
+                        <Col key={product.id}  xs={24} sm={24} md={12} lg={8}>
 
                             <Link href={`/products/${product?.id}`} style={{ color: 'none' }}>
                                 <Card bordered={true} hoverable style={{ color: 'black' }}>

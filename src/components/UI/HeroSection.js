@@ -11,9 +11,13 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <div style={{ width: '100vw', backgroundColor: 'grey', minHeight: '50vh', margin: '0 0 0 -290px' }}>
+    <div style={{ width: '60vw', minHeight: '50vh', margin: '0 auto' }}>
       <Row>
-        <Col span={12}>
+        {/* <Col span={12}>
+          Man
+        </Col> */}
+
+        <Col span={24}>
           <Swiper
             modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={10}
@@ -26,7 +30,7 @@ const HeroSection = () => {
             pagination={{ clickable: true }}
 
             scrollbar={{ draggable: true }}
-            
+
           >
             <div className=''>
               <SwiperSlide>
@@ -43,9 +47,7 @@ const HeroSection = () => {
           </Swiper>
         </Col>
 
-        <Col span={12}>
-          Man
-        </Col>
+
       </Row>
     </div>
   )

@@ -2,6 +2,7 @@ import RootLayout from '@/components/layouts/RootLayout'
 import { Button, Card, Col, Image, Row, Space, Tag } from 'antd'
 import Link from 'next/link'
 import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 
 const categoryCardStyle = {
     height: '50px',
@@ -72,7 +73,7 @@ const PcBuilder = () => {
 
                     }
                     {
-                        count >= 5 ? <Button type='primary'>Complete Build</Button> : <Button disabled>Complete Build</Button>
+                        count >= 5 ? <Button onClick={()=>toast("Build Successful")} type='primary'>Complete Build</Button> : <Button disabled>Complete Build</Button>
                     }
                 </Col>
             </Row>

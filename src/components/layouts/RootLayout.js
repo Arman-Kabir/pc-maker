@@ -47,13 +47,15 @@ const RootLayout = ({ children }) => {
 
                 <Content
                     style={{
-                        padding: '0 15%',
+                        // padding: '0 15%',
+                        width:"var(--max-width)",
+                        margin:'0 auto'
                     }}
                 >
                     <div
                         className="site-layout-content"
                         style={{
-                            background: colorBgContainer,
+                            background: '',
                             minHeight: "100vh"
                         }}
                     >

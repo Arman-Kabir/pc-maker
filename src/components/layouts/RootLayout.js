@@ -12,16 +12,18 @@ const RootLayout = ({ children }) => {
     console.log("from header", session);
 
     const {
-        token: { colorBgContainer },
+        token: {colorBgContainer  },
     } = theme.useToken();
     return (
-        <div>
-            <Layout className="layout">
+        <div style={{}}>
+            <Layout className="layout" style={{ margin:'0',padding:'0'}}>
                 <Header
                     style={{
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'space-between'
+                        justifyContent: 'space-between',
+                        // backgroundColor:'#fff',
+                       
                     }}
                 >
                     <div className="demo-logo" style={{ color: "white", fontWeight: "bold", fontSize: "20px", lineHeight: '0' }}>

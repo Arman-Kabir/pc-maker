@@ -12,7 +12,7 @@ const RootLayout = ({ children }) => {
     console.log("from header", session);
 
     const {
-        token: {colorBgContainer  },
+        token: { bodyBg },
     } = theme.useToken();
     return (
         <div style={{}}>
@@ -49,13 +49,14 @@ const RootLayout = ({ children }) => {
                     style={{
                         // padding: '0 15%',
                         width:"var(--max-width)",
-                        margin:'0 auto'
+                        margin:'0 auto',
+                        backgroundColor:'bodyBg',
                     }}
                 >
                     <div
                         className="site-layout-content"
                         style={{
-                            background: '',
+                            background: bodyBg,
                             minHeight: "100vh"
                         }}
                     >
